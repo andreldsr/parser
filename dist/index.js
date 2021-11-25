@@ -23,7 +23,7 @@ function getPaths(args) {
 }
 function checkPaths() {
     if (inputPath.length === 0 || outputPath.length === 0) {
-        throw Error('');
+        throw Error('input or output path is null');
     }
 }
 getPaths(args);

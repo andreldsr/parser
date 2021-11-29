@@ -1,12 +1,10 @@
-import { readFile, writeFile } from './file-helper'
-import { splitLines, transformErrorLines } from './line-handler'
-import { getPaths, inputPath, outputPath } from './path-helper'
+import { handleData } from './data-handler'
+import { readFile } from './file-helper'
+import { getPath, inputPath } from './path-helper'
 
-getPaths()
-handleData(readFile(inputPath))
-
-function handleData (data) {
-  const errorLines = splitLines(data)
-  const readyErrorLines = transformErrorLines(errorLines)
-  writeFile(readyErrorLines, outputPath)
+function execute () {
+  getPath()
+  handleData(readFile(inputPath))
 }
+
+execute()

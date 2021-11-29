@@ -1,10 +1,9 @@
-const INPUT_ARG = '--input'
-const OUTPUT_ARG = '--output'
+import { INPUT_ARG, OUTPUT_ARG } from './conts'
 
 export let inputPath = ''
 export let outputPath = ''
 
-export function getPaths () {
+export function getPath () {
   const args = process.argv.slice(2)
   const inputIndex = args.indexOf(INPUT_ARG)
   const outputIndex = args.indexOf(OUTPUT_ARG)

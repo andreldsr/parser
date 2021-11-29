@@ -1,11 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.writeFile = exports.readFile = void 0;
+exports.writeFile = void 0;
 var fs = require("fs");
-function readFile(inputPath) {
-    return fs.readFileSync(inputPath, 'utf-8');
-}
-exports.readFile = readFile;
 function writeFile(data, outputPath) {
     var lines = '[';
     data.forEach(function (log, index) {

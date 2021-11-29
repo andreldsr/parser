@@ -1,21 +1,5 @@
-import { LogInfo } from './log-info'
-
-const DATE_PART = 0
-const LEVEL_PART = 1
-const ERROR_PART = 2
-const SPLIT_MARKER = ' - '
-const ERROR_LEVEL = 'error'
-
-export function splitLines (data: string) {
-  const lines = data.replace(/\r\n/g, '\n').split('\n')
-  const errorLines = []
-  for (const line of lines) {
-    const logParts = line.split(SPLIT_MARKER)
-    if (logParts[LEVEL_PART] !== ERROR_LEVEL) { continue }
-    errorLines.push(line)
-  }
-  return errorLines
-}
+import { LogInfo } from '../interfaces/log-info'
+import { DATE_PART, ERROR_PART, LEVEL_PART, SPLIT_MARKER } from './consts'
 
 export function transformErrorLines (lines: string[]) {
   const readyErrorLines = []

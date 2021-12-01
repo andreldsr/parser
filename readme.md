@@ -1,7 +1,7 @@
 # Log parser app
 
-A command line node.js application, which parses the input log file. 
-The application finds all the log messages with the level error and print them into the output file. Formats of input and outfit files are described below.
+*Log parser app* is a command line node.js based application created to parse log files.
+It works by finding error messages and printing them into a output file.
 
 ## Input format
 ```
@@ -22,13 +22,13 @@ Example
 ```
 
 ## Usage
-After cloning the project run the build process:
+Clone the project and run the command bellow inside its folder:
 ```bash
 $ yarn build
 ```
-And test the application running the command:
+Then run the command bellow to execute the app:
 ```bash
 $ node node dist/parser.js --input file/app.log --output file/logs.json
 ```
 
-The base file for the test "file/app.log" is ready for tests and based on the initial challenge. It should create the "file/logs.json" output file.
+The file "file/app.log" can be used as a testing example. After executing the app a file will be created under the path "file/logs.json".

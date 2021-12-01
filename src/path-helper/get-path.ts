@@ -27,3 +27,8 @@ export function getInputPath () {
 export function getOutputPath () {
   return outputPath
 }
+
+export function clearPaths () {
+  inputPath = ''
+  outputPath = ''
+}

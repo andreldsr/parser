@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon src/index.ts --ignore __tests__",
     "build": "tsc --build",
-    "read": "node dist/index.js --input ./file/input.txt --output ./file/output.txt"
+    "read": "node dist/index.js --input ./file/input.txt --output ./file/output.txt",
+    "test": "jest"
   },
   "dependencies": {
     "@types/node": "^16.11.10",

@@ -7,12 +7,12 @@ describe('Read File', () => {
   })
 
   it('should throw an error when called with incorrect path', () => {
-    expect(() => { readFile('./file/input') }).toThrowError()
+    expect(() => { readFile('./__tests__/input') }).toThrowError()
   })
 
   it('should get a string when called with a correct path', () => {
-    expect(readFile('./file/input.txt')).not.toBeNull()
-    expect(readFile('./file/input.txt').length).toBeGreaterThan(0)
+    expect(readFile('./__tests__/input.txt')).not.toBeNull()
+    expect(readFile('./__tests__/input.txt').length).toBeGreaterThan(0)
   })
 })
 
@@ -20,9 +20,9 @@ describe('Write File', () => {
   const lines = ['Lines']
 
   it('should write a string when called with a correct path', () => {
-    expect(() => writeFile(lines, './file/output.txt')).not.toThrowError()
+    expect(() => writeFile(lines, './__tests__/output.txt')).not.toThrowError()
     setTimeout(
-      () => { expect(readFile('./file/output.txt')).toBe('[Lines]') }
+      () => { expect(readFile('./__tests__/output.txt')).toBe('[Lines]') }
       , 100)
   })
 })

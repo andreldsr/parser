@@ -1,7 +1,7 @@
 import { INPUT_ARG, OUTPUT_ARG } from './conts'
 
-export let inputPath = ''
-export let outputPath = ''
+let inputPath = ''
+let outputPath = ''
 
 export function getPath () {
   const args = process.argv.slice(2)
@@ -18,4 +18,12 @@ export function getPath () {
 
 function checkPaths () {
   if (inputPath.length === 0 || outputPath.length === 0) { throw Error('input or output path is null') }
+}
+
+export function getInputPath () {
+  return inputPath
+}
+
+export function getOutputPath () {
+  return outputPath
 }

@@ -19,5 +19,5 @@ function handleLogLine (line: string) {
 }
 
 function buildLogOutput (timestamp: number, loglevel: string, info: LogInfo) {
-  return `{"timestamp": ${timestamp}, "loglevel": ${loglevel}, "transactionId": ${info.transactionId}, "err": ${info.err}}`
+  return `{"timestamp": ${timestamp}, "loglevel": "${loglevel}", "transactionId": "${info.transactionId}", "err": "${info.err}"}`
 }
